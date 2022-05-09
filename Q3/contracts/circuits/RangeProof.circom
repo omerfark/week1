@@ -12,4 +12,10 @@ template RangeProof(n) {
     component high = GreaterEqThan(n);
 
     // [assignment] insert your code here
+    low.in[0]<== in; // input is the number to be proved
+    high.in[0]<== in; // input is the number to be proved line 2
+    low.in[1]<== range[1];
+    high.in[1]<== range[0];
+    out<== low.out * high.out; // this is the output of the circuit
+
 }
